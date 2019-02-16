@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SLBaseObjCKit'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SLBaseObjCKit.'
+  s.summary          = '项目的基本的配置'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+    提供了项目部署所需的基本配置
                        DESC
 
   s.homepage         = 'https://github.com/CoderSLZeng/SLBaseObjCKit'
@@ -30,11 +30,25 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'SLBaseObjCKit/Classes/**/*'
+  # s.source_files = 'SLBaseObjCKit/Classes/**/*'
   
   # s.resource_bundles = {
   #   'SLBaseObjCKit' => ['SLBaseObjCKit/Assets/*.png']
   # }
+
+# Subspec
+s.subspec 'Header' do |header|
+header.source_files = 'SLBaseObjCKit/Classes/Header/*.{h,m}'
+end
+
+s.subspec 'Const' do |const|
+const.source_files = 'SLBaseObjCKit/Classes/Const/*.{h,m}'
+end
+
+s.subspec 'Config' do |config|
+config.source_files = 'SLBaseObjCKit/Classes/Config/*.{h,m}'
+config.dependency 'MJExtension'
+end
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

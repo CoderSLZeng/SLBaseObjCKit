@@ -1,15 +1,28 @@
 PODS:
-  - SLBaseObjCKit (0.1.0)
+  - MJExtension (3.0.15.1)
+  - SLBaseObjCKit (0.1.0):
+    - SLBaseObjCKit/Config (= 0.1.0)
+    - SLBaseObjCKit/Const (= 0.1.0)
+    - SLBaseObjCKit/Header (= 0.1.0)
+  - SLBaseObjCKit/Config (0.1.0):
+    - MJExtension
+  - SLBaseObjCKit/Const (0.1.0)
+  - SLBaseObjCKit/Header (0.1.0)
 
 DEPENDENCIES:
   - SLBaseObjCKit (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MJExtension
 
 EXTERNAL SOURCES:
   SLBaseObjCKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SLBaseObjCKit: 6da61ec75f3fab2f133bd937b7af13277c89087b
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  SLBaseObjCKit: 12449a5630e6dc97a77a107d2d2fa1476850f1ed
 
 PODFILE CHECKSUM: f63c95417ab5554101e7833595b84f43bfb24231
 
