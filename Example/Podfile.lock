@@ -1,0 +1,16 @@
+PODS:
+  - SLBaseObjCKit (0.1.0)
+
+DEPENDENCIES:
+  - SLBaseObjCKit (from `../`)
+
+EXTERNAL SOURCES:
+  SLBaseObjCKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SLBaseObjCKit: 6da61ec75f3fab2f133bd937b7af13277c89087b
+
+PODFILE CHECKSUM: f63c95417ab5554101e7833595b84f43bfb24231
+
+COCOAPODS: 1.5.3
