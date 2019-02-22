@@ -37,9 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A04ACB4772591537EB362F3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		0A04ACB4772591537EB362F3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		0B196B8FBE4EFD80CAD3DC3C /* Pods_SLBaseObjCKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SLBaseObjCKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D5E56A85EB21EE2C0BBC565 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4D5E56A85EB21EE2C0BBC565 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		524F0CD8C21D567CA4DFC5F5 /* Pods_SLBaseObjCKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SLBaseObjCKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EF2FFD3676C24538CD76DF /* Pods-SLBaseObjCKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLBaseObjCKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SLBaseObjCKit_Example/Pods-SLBaseObjCKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* SLBaseObjCKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLBaseObjCKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,7 +65,7 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		895958E0A04C9633CBB6CCBA /* Pods-SLBaseObjCKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLBaseObjCKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SLBaseObjCKit_Example/Pods-SLBaseObjCKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A94FAD7CA1EBA88C76D443FD /* Pods-SLBaseObjCKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLBaseObjCKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SLBaseObjCKit_Tests/Pods-SLBaseObjCKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		AEA5D2BA645BB731944FACF9 /* SLBaseObjCKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SLBaseObjCKit.podspec; path = ../SLBaseObjCKit.podspec; sourceTree = "<group>"; };
+		AEA5D2BA645BB731944FACF9 /* SLBaseObjCKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SLBaseObjCKit.podspec; path = ../SLBaseObjCKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D1C9301AF46AAA723F919448 /* Pods-SLBaseObjCKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLBaseObjCKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SLBaseObjCKit_Tests/Pods-SLBaseObjCKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -207,7 +207,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				6239CEF77F25FEDCFD7FAD61 /* [CP] Embed Pods Frameworks */,
+				4D3C1461D47267AE1CB7C54A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = CoderSLZeng;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = CF3ZTC43YH;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -294,6 +297,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4D3C1461D47267AE1CB7C54A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SLBaseObjCKit_Example/Pods-SLBaseObjCKit_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/SLBaseObjCKit/SLBaseObjCKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SLBaseObjCKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SLBaseObjCKit_Example/Pods-SLBaseObjCKit_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5268C0D04D70387224763D86 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -314,30 +341,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6239CEF77F25FEDCFD7FAD61 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SLBaseObjCKit_Example/Pods-SLBaseObjCKit_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
-				"${BUILT_PRODUCTS_DIR}/SLBaseObjCKit/SLBaseObjCKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SLBaseObjCKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SLBaseObjCKit_Example/Pods-SLBaseObjCKit_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		849CD39B82366D1B75EE2915 /* [CP] Check Pods Manifest.lock */ = {
@@ -499,6 +502,7 @@
 			baseConfigurationReference = 52EF2FFD3676C24538CD76DF /* Pods-SLBaseObjCKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CF3ZTC43YH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SLBaseObjCKit/SLBaseObjCKit-Prefix.pch";
 				INFOPLIST_FILE = "SLBaseObjCKit/SLBaseObjCKit-Info.plist";
@@ -514,6 +518,7 @@
 			baseConfigurationReference = 895958E0A04C9633CBB6CCBA /* Pods-SLBaseObjCKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CF3ZTC43YH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SLBaseObjCKit/SLBaseObjCKit-Prefix.pch";
 				INFOPLIST_FILE = "SLBaseObjCKit/SLBaseObjCKit-Info.plist";
