@@ -35,6 +35,7 @@ Pod::Spec.new do |s|
         
         s.source_files = 'SLBaseObjCKit/Classes/**/*.h'
         s.public_header_files = 'SLBaseObjCKit/Classes/**/*.h'
+        s.dependency 'MJExtension'
         
         if ENV['IS_LIB'] # Use demo: IS_BINARY=1 IS_LIB=1 pod install
             

@@ -37,7 +37,11 @@ return instance_; \
 - (id)copyWithZone:(NSZone *)zone \
 { \
 return instance_; \
-}
+} \
+\
+- (id)mutableCopyWithZone:(NSZone *)zone { \
+    return instance_;\
+}\
 
 #else
 

@@ -43,7 +43,30 @@ fprintf(stderr, "[--%s--]*[--%s:%d--]*[--%s--]\n\n", [str UTF8String], [[[NSStri
 #define SLStrongObj(o) autoreleasepool{} __strong typeof(o) o = o##Weak;
 
 // 写入plist文件
-#define SLWriteToPlist(data, path, filename) [data writeToFile:[NSString stringWithFormat:@"%@%@.plist", @#path @#filename] atomically:YES];
+#define SLWriteToPlist(data, path, filename) [data writeToFile:[NSString stringWithFormat:@"%@%@.plist", @#path @#filename] atomically:YES];
+
+// 加载图片
+#define PNGIMAGE(NAME)          [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:(NAME) ofType:@"png"]]
+#define JPGIMAGE(NAME)          [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:(NAME) ofType:@"jpg"]]
+
+// 字体大小(常规/粗体)
+#define BOLDSYSTEMFONT(FONTSIZE)[UIFont boldSystemFontOfSize:FONTSIZE]
+#define SYSTEMFONT(FONTSIZE)    [UIFont systemFontOfSize:FONTSIZE]
+#define FONT(NAME, FONTSIZE)    [UIFont fontWithName:(NAME) size:(FONTSIZE)]
+
+// View 圆角和加边框
+#define ViewBorderRadius(View, Radius, Width, Color)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES];\
+[View.layer setBorderWidth:(Width)];\
+[View.layer setBorderColor:[Color CGColor]]
+
+// View 圆角
+#define ViewRadius(View, Radius)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES]
 
 /** 状态栏 */
 #define STATUS_BAR_FRAME    [[UIApplication sharedApplication] statusBarFrame]
@@ -56,13 +79,22 @@ fprintf(stderr, "[--%s--]*[--%s:%d--]*[--%s--]\n\n", [str UTF8String], [[[NSStri
 #define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
+#define MinX(v)                 CGRectGetMinX((v).frame)
+#define MinY(v)                 CGRectGetMinY((v).frame)
+
+#define MidX(v)                 CGRectGetMidX((v).frame)
+#define MidY(v)                 CGRectGetMidY((v).frame)
+
+#define MaxX(v)                 CGRectGetMaxX((v).frame)
+#define MaxY(v)                 CGRectGetMaxY((v).frame)
+
 #define kInch6_5 (SLScreenH == 896) // iPhone Xs Max（分辨率为1242*2688）@3
 #define kInch6_1 (SLScreenH == 896) // iPhone XR （分辨率为828*1792）@2
 #define kInch5_8 (SLScreenH == 812) // iPhone X,Xs（分辨率为1125*2436）@3
 #define kInch5_5 (SLScreenH == 736) // iPhone 6,6s,7,8 Plus
 #define kInch4_7 (SLScreenH == 667) // iPhone 6,6s,7,8
-#define kInch4   (SLScreenH == 568)   // iPhone 5,5c,5s,SE
-#define kInch3_5 (SLScreenH == 480) // iPhone 4和之前的机型
+#define kInch4   (SLScreenH == 568) // iPhone 5,5c,5s,SE
+#define kInch3_5 (SLScreenH == 480) // iPhone 4s和之前的机型
 
 // 判断机型是否是全面屏
 #define IS_FULL_SCREEN (NAV_BAR_MAX_Y > 64 ? YES : NO)
