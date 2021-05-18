@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'SLBaseObjCKit'
-    s.version          = '0.2.0'
+    s.version          = '0.3.0'
     s.summary          = '项目的基本的配置'
     
     # This description is used to generate tags and improve search results.
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
     提供了项目部署所需的基本配置
     DESC
     
-    s.homepage         = 'https://github.com/CoderSLZeng/SLBaseObjCKit'
+    s.homepage         = 'https://github.com/yiyezhiqiu1024/SLBaseObjCKit'
     # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
-    s.author           = { 'CoderSLZeng' => '359297567@qq.com' }
-    s.source           = { :git => 'https://github.com/CoderSLZeng/SLBaseObjCKit.git', :tag => s.version.to_s }
+    s.author           = { 'yiyezhiqiu1024' => '359297567@qq.com' }
+    s.source           = { :git => 'https://github.com/yiyezhiqiu1024/SLBaseObjCKit.git', :tag => s.version.to_s }
     # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
     
     s.ios.deployment_target = '8.0'
@@ -40,14 +40,14 @@ Pod::Spec.new do |s|
         if ENV['IS_LIB'] # Use demo: IS_BINARY=1 IS_LIB=1 pod install
             
             # 打包 【.a】 文件命令行
-            # pod package SLBaseObjCKit.podspec --library --exclude-deps --spec-sources='https://github.com/CoderSLZeng/SLBaseObjCKit.git,https://github.com/CocoaPods/Specs.git'
+            # pod package SLBaseObjCKit.podspec --library --exclude-deps --spec-sources='https://github.com/yiyezhiqiu1024/SLBaseObjCKit.git,https://github.com/CocoaPods/Specs.git'
             
             s.ios.vendored_libraries = 'SLBaseObjCKit/Products/libSLBaseObjCKit.a'
             
             else # Use demo: IS_BINARY=1 pod install
             
             # 打包 【.framework】 文件命令行
-            # pod package SLBaseObjCKit.podspec  --exclude-deps --spec-sources='https://github.com/CoderSLZeng/SLBaseObjCKit.git,https://github.com/CocoaPods/Specs.git'
+            # pod package SLBaseObjCKit.podspec  --exclude-deps --spec-sources='https://github.com/yiyezhiqiu1024/SLBaseObjCKit.git,https://github.com/CocoaPods/Specs.git'
             
             s.ios.vendored_frameworks = 'SLBaseObjCKit/Products/SLBaseObjCKit.framework'
             
